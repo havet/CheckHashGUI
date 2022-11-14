@@ -1,11 +1,9 @@
 ============
 CHECKHASHGUI
 ============
-A tool to compare the hash of a file to the official hash of the file.
+A tool to compare the hash of a file with the official hash of the file.
 
-I've taken a fork of my work to my heart and start from there.
-
-Per Tunedal
+I've taken a fork of my work to my heart and start from there. My thanks to tunedal for the update to Python 3.
 
 How to use:
 
@@ -21,7 +19,3 @@ Background
 The fork of my work was found at:
 https://github.com/tunedal/checkhashgui
 
-This is a fork of `Per Tunedal's CHECKHASHGUI version 0.2`__,
-updated for Python 3.
-
-__ https://tunedal.nu/download/checkhashgui.py

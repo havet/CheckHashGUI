@@ -2,9 +2,9 @@
 
 """
 CHECKHASHGUI - Calculates the checksum of file and compares it with user input.
-Version: 0.x
+Version: 0.4
 
-Copyright (c) 2012-2014 Per Tunedal, Stockholm, Sweden
+Copyright (c) 2012-2022 Per Tunedal, Stockholm, Sweden
 Author: Per Tunedal <info@tunedal.nu>
 
 Copyright (c) 2022 Henrik Tunedal
@@ -43,8 +43,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # 0.x (by Henrik Tunedal)
 # Added unit tests.
 # Refactored code.
+#
+# 0.4
+# Help file created, instead of redirect to an external web page.
 
-
+from pathlib import Path
 import hashlib, webbrowser
 import tkinter as tk, tkinter.ttk as ttk
 import tkinter.filedialog as filedialog
@@ -81,7 +84,11 @@ class MainController:
         self._view.set_text(__doc__.strip())
 
     def help(self):
-        webbrowser.open('https://tunedal.nu/nedladdning.htm')
+        #webbrowser.open('help.htm')
+        #helpfile = os.path.join(sys.path[0], "help.htm")
+        helpfile = Path(__file__).with_name('help.htm')
+        #os.startfile(helpfile)
+        webbrowser.open(helpfile)
 
     def quit(self):
         self._app.close()

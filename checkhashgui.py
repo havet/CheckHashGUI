@@ -84,10 +84,7 @@ class MainController:
         self._view.set_text(__doc__.strip())
 
     def help(self):
-        #webbrowser.open('help.htm')
-        #helpfile = os.path.join(sys.path[0], "help.htm")
         helpfile = Path(__file__).with_name('help.htm')
-        #os.startfile(helpfile)
         webbrowser.open(helpfile)
 
     def quit(self):
